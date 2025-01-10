@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full bg-white dark:bg-zinc-800 border-b shadow-md flex justify-center items-center">
+      <nav className="w-full bg-white dark:bg-zinc-800 border-b shadow-md flex justify-center items-center h-[5rem]">
         <div className="container mx-auto flex justify-between items-center p-4 lg:px-8">
           {/* LOGO */}
           <div>
@@ -23,13 +23,13 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex justify-center items-center gap-2">
+          <div className="hidden sm:flex justify-center items-center gap-2">
             <NavLink
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "bg-zinc-300 dark:bg-zinc-600 text-black dark:text-white font-semibold px-4 py-2 rounded"
-                  : "text-black dark:text-white font-normal hover:bg-zinc-100 dark:hover:bg-zinc-700 hover:text-gray-900 dark:hover:text-white px-4 py-2 rounded"
+                  ? "border-b-2 border-b-black dark:border-b-white text-black dark:text-white font-semibold p-2 "
+                  : "text-black dark:text-white font-normal hover:border-b-2 hover:border-b-gray-700  dark:hover:border-b-white hover:text-gray-700 dark:hover:text-white p-2 "
               }
             >
               Home
@@ -39,8 +39,8 @@ const Navbar = () => {
               to="/Login"
               className={({ isActive }) =>
                 isActive
-                  ? "bg-zinc-300 dark:bg-zinc-600 text-black dark:text-white font-semibold px-4 py-2 rounded"
-                  : "text-black dark:text-white font-normal hover:bg-zinc-100 dark:hover:bg-zinc-700 hover:text-gray-900 dark:hover:text-white px-4 py-2 rounded"
+                  ? "border-b-2 border-b-black dark:border-b-white text-black dark:text-white font-semibold p-2 "
+                  : "text-black dark:text-white font-normal hover:border-b-2 hover:border-b-gray-700  dark:hover:border-b-white hover:text-gray-700 dark:hover:text-white p-2 "
               }
             >
               Login
@@ -50,8 +50,8 @@ const Navbar = () => {
               to="/Signup"
               className={({ isActive }) =>
                 isActive
-                  ? "bg-zinc-300 dark:bg-zinc-600 text-black dark:text-white font-semibold px-4 py-2 rounded"
-                  : "text-black dark:text-white font-normal hover:bg-zinc-100 dark:hover:bg-zinc-700 hover:text-gray-900 dark:hover:text-white px-4 py-2 rounded"
+                  ? "border-b-2 border-b-black dark:border-b-white text-black dark:text-white font-semibold p-2 "
+                  : "text-black dark:text-white font-normal hover:border-b-2 hover:border-b-gray-700  dark:hover:border-b-white hover:text-gray-700 dark:hover:text-white p-2 "
               }
             >
               Signup
