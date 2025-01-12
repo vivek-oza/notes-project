@@ -33,6 +33,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { Description } from "@radix-ui/react-toast";
 
 export default function Login() {
   const { toast } = useToast();
@@ -57,6 +58,10 @@ export default function Login() {
   const onSubmit = (data) => {
     console.log("Form submitted");
     console.log(data);
+    toast({
+      title: "Form submitted",
+      description: "Logic for form submission goes here",
+    });
   };
 
   const { isSubmitting, setIsSubmitting } = useState(false);
@@ -64,17 +69,16 @@ export default function Login() {
   return (
     <>
       <Navbar />
-      <div className="flex w-full justify-center items-center h-[calc(100vh-5rem)]">
-        <Card className="lg:max-w-lg md:max-w-md max-w-sm ">
-          <CardHeader>
+      <div className="flex w-full justify-center items-center min-h-[calc(100vh-4rem)]">
+        <Card className="md:w-[450px] w-[350px]  ">
+          <CardHeader className="p-4">
             <CardTitle className="font-bree">Login</CardTitle>
-            <CardDescription>
-              Please select you role and Login to continue.
-            </CardDescription>
+            <CardDescription>Please Login to continue.</CardDescription>
           </CardHeader>
+
           <Divider />
 
-          <CardContent className="mt-4">
+          <CardContent className="p-4">
             {/* <form onSubmit={handleSubmit(onSubmit)}>
               <div>
                 <Label>
@@ -105,7 +109,7 @@ export default function Login() {
                         <Input
                           {...field}
                           type="email"
-                          placeholder="example@x.com"
+                          placeholder="Heisenberg@example.com"
                         />
                       </FormControl>
                       <FormMessage />
@@ -136,6 +140,17 @@ export default function Login() {
               </form>
             </Form>
           </CardContent>
+
+          <Divider />
+
+          <CardFooter className="p-4">
+            <p className="text-center mx-auto">
+              Don't have an account?{" "}
+              <Link to="/Signup" className="text-blue-500">
+                Signup
+              </Link>
+            </p>
+          </CardFooter>
         </Card>
       </div>
     </>

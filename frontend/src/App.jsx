@@ -12,17 +12,17 @@ const NotesyRouter = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    // errorElement: <NotFound />,
+    errorElement: <NotFound />,
   },
   {
     path: "/Signup",
     element: <Signup />,
-    // errorElement: <NotFound />,
+    errorElement: <NotFound />,
   },
   {
     path: "/Login",
     element: <Login />,
-    // errorElement: <NotFound />,
+    errorElement: <NotFound />,
   },
 ]);
 
